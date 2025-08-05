@@ -52,8 +52,8 @@ class App extends React.Component {
         </button>
 
         {shows && (
-          <div style={{ marginTop: "20px", backgroundColor: '#816b89' }}>
-            <img style={{ height: '200px', objectFit: 'cover' }} src={person.img} alt="Profile" />
+          <div   style={{ marginTop: "20px", backgroundColor: "#816b89",padding: "20px",borderRadius: "10px",textAlign: "center" }}>
+            <img  style={{ height: "200px",borderRadius: "10px",objectFit: "cover", marginBottom: "10px"}} src={person.img} alt="Profile" />
             <h2 style={{ color: 'white' }}>{person.fullName}</h2>
              <h4 style={{ color: 'white' }}>{person.profession}</h4>
             <p style={{ color: 'white' }}>{person.bio}</p>
