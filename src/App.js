@@ -43,8 +43,10 @@ class App extends React.Component {
     return (
       <div className="App mx-auto" style={{ width: "800px" }}>
         <h1 style={{ color: 'purple' }}>React  Profile</h1>
-        <button  style={{ color: 'white', backgroundColor: '#816b89',border: 'none',width: '100px',padding: '12px',fontWeight: '500',borderRadius: '3px', }}
-                  className="mt-3 mx-auto"
+        <button   style={{
+                    backgroundColor: '#816b89',border: 'none',width: '150px',padding: '8px',fontWeight: '500',borderRadius: '3px', color: 'white'
+                  }}
+                  
                   onClick={this.toggleShow}>
           {shows ? "Hide Profile" : "Show Profile"}
         </button>
