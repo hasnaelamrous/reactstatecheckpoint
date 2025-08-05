@@ -1,16 +1,17 @@
 import React from "react";
 import "./App.css";
-import fleur from "./fleur.png";
+import "bootstrap/dist/css/bootstrap.min.css";
+import profile from "./profile.avif";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       person: {
-        fullName: "Hasna El",
-        bio: "A  developer ",
-        img: fleur,
-        profession: "Technicien",
+        fullName: "Layla El",
+        bio: "Layla is a seasoned graphic designer with over 10 years of experience in branding and illustration. She loves turning ideas into visually compelling stories. ",
+        img: profile,
+        profession: "Graphic Designer",
       },
       shows: false,
       timeSinceMount: 0,
@@ -40,18 +41,21 @@ class App extends React.Component {
     const { person, shows, timeSinceMount } = this.state;
 
     return (
-      <div className="App">
-        <h1>React Class-Based Profile</h1>
-        <button onClick={this.toggleShow}>
+      <div className="App mx-auto" style={{ width: "800px" }}>
+        <h1 style={{ color: 'purple' }}>React  Profile</h1>
+        <button  style={{ color: 'white', backgroundColor: '#816b89',border: 'none',width: '100px',padding: '12px',fontWeight: '500',borderRadius: '3px', }}
+                  className="mt-3 mx-auto"
+                  onClick={this.toggleShow}>
           {shows ? "Hide Profile" : "Show Profile"}
         </button>
 
         {shows && (
-          <div style={{ marginTop: "20px" }}>
+          <div style={{ marginTop: "20px", backgroundColor: '#816b89' }}>
             <img style={{ height: '200px', objectFit: 'cover' }} src={person.img} alt="Profile" />
-            <h2>{person.fullName}</h2>
-            <p>{person.bio}</p>
-            <h4>{person.profession}</h4>
+            <h2 style={{ color: 'white' }}>{person.fullName}</h2>
+             <h4 style={{ color: 'white' }}>{person.profession}</h4>
+            <p style={{ color: 'white' }}>{person.bio}</p>
+           
           </div>
         )}
 
