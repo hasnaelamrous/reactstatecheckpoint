@@ -1,7 +1,7 @@
-import React from "react";
-import "./App.css";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import profile from "./profile.avif";
+
 
 class App extends React.Component {
   constructor(props) {
@@ -41,7 +41,7 @@ class App extends React.Component {
     const { person, shows, timeSinceMount } = this.state;
 
     return (
-      <div className="App mx-auto" style={{ width: "800px" }}>
+      <div className="App mx-auto text-center" style={{ width: "800px" }}>
         <h1 style={{ color: 'purple' }}>React  Profile</h1>
         <button   style={{
                     backgroundColor: '#816b89',border: 'none',width: '150px',padding: '8px',fontWeight: '500',borderRadius: '3px', color: 'white'
@@ -64,6 +64,7 @@ class App extends React.Component {
         <p style={{ marginTop: "30px" }}>
           Time since component mounted: {timeSinceMount} seconds
         </p>
+         
       </div>
     );
   }
